@@ -13,13 +13,15 @@ const Flashcard = ({ flashcard }: Props) => {
   return (
     <CarouselItem>
       <div
-        className={`card h-[300px] ${flip ? "flip" : ""}`}
+        className={`card flex justify-center items-center transition-transform transform hover:translate-y-2 h-[320px] ${
+          flip ? "flip" : ""
+        }`}
         onClick={() => setFlip(!flip)}
       >
-        <div className="front h-[300px] flex items-center justify-center border-2 border-blue-500 rounded-lg">
+        <div className="front min-h-[300px] flex items-center justify-center border-2 border-blue-500 rounded-lg">
           {flashcard.question}
         </div>
-        <div className="back h-[300px] flex items-center justify-center bg-blue-400 text-white font-bold tracking-tight rounded-lg">
+        <div className="back min-h-[300px] flex items-center justify-center bg-blue-400 text-white font-bold tracking-tight rounded-lg">
           {flashcard.answer}
         </div>
       </div>

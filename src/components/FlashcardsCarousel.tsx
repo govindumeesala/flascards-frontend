@@ -11,7 +11,7 @@ import { FlashcardType } from "@/types";
 import { useEffect, useState } from "react";
 
 const FlashcardsCarousel = () => {
-  const { flashcards, isLoading, isError, error } = useGetAllFlashcards();
+  const { flashcards, isLoading, isError } = useGetAllFlashcards();
 
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
