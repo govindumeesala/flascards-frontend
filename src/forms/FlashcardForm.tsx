@@ -46,10 +46,15 @@ const FlashcardForm = ({
     form.reset(currentFlashcard);
   }, [currentFlashcard, form]);
 
+  const handleSubmit = async (data: FlashcardFormData) => {
+    await onSave(data);
+    if (title === "Create Flashcard") form.reset(); // Reset form to empty values after submission
+  };
+
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSave)}
+        onSubmit={form.handleSubmit(handleSubmit)}
         className="space-y-4 bg-gray-100 rounded-lg px-3 py-4 md:p-10 m-4"
       >
         <div>
