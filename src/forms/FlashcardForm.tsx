@@ -50,7 +50,7 @@ const FlashcardForm = ({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSave)}
-        className="space-y-4 bg-gray-100 rounded-lg px-3 py-4 md:p-10 mx-4"
+        className="space-y-4 bg-gray-100 rounded-lg px-3 py-4 md:p-10 m-4"
       >
         <div>
           <h2 className="text-2xl font-bold">{title}</h2>

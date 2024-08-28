@@ -31,16 +31,11 @@ const FlashcardsCarousel = () => {
   }, [api]);
 
   if (isError) {
-    console.log(error);
     return <span>Error fetching flashcards</span>;
   }
 
   if (isLoading) {
     return <span>Loading...</span>;
-  }
-
-  if (!isLoading) {
-    console.log(flashcards);
   }
 
   return (
