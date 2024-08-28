@@ -23,7 +23,7 @@ const FlashcardListComp = ({ flashcard }: Props) => {
   };
 
   return (
-    <div className="flex flex-col items-start justify-center space-y-4 p-4 border-2 border-blue-500 rounded-lg">
+    <div className="flex flex-col items-start justify-center space-y-4 p-4 border-2 border-blue-500 rounded-lg hover:shadow-lg hover:shadow-gray-900/50 shadow-md">
       <div className="text-md text-gray-600">{flashcard.question}</div>
       <div className="font-bold text-md tracking-tight">{flashcard.answer}</div>
       <div className="flex gap-4">
