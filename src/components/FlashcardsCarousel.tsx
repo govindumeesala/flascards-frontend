@@ -40,7 +40,7 @@ const FlashcardsCarousel = () => {
 
   return (
     <div className="min-h-[70vh] flex flex-col justify-center items-center mt-8">
-      <Carousel className="w-full max-w-xs md:max-w-sm" setApi={setApi}>
+      <Carousel className="w-full max-w-[300px] md:max-w-sm" setApi={setApi}>
         <CarouselContent>
           {flashcards.map((flashcard: FlashcardType) => (
             <Flashcard flashcard={flashcard} />
